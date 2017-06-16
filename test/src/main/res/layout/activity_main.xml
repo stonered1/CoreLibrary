@@ -20,5 +20,9 @@
         android:layout_height="wrap_content"
         android:text="自定义的多选框"/>
 
+    <com.example.stone.switchbutton.SwitchButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
 
 </LinearLayout>

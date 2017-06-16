@@ -32,6 +32,8 @@ public class MainActivity extends MPermissionsActivity implements View.OnClickLi
                     public void run() {
                         super.run();
                         ToastUtils.showMessage(MainActivity.this, "Stone");
+
+                        
                     }
                 }.start();
 

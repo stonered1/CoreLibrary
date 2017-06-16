@@ -1,4 +1,4 @@
-package com.example.stone.multichoicepicker;
+package com.bigkoo.pickerview.view.multichoicepicker;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -12,11 +12,9 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.bigkoo.pickerview.R;
 import com.bigkoo.pickerview.lib.WheelView;
 import com.bigkoo.pickerview.view.BasePickerView;
-import com.example.stone.R;
-
-
 import java.util.ArrayList;
 import java.util.List;
 

@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.stone.multichoicepicker.MultiChoicePicker;
+import com.bigkoo.pickerview.view.multichoicepicker.MultiChoicePicker;
 import com.example.stone.permissions.MPermissionsActivity;
 import com.example.stone.toastutil.ToastUtils;
 

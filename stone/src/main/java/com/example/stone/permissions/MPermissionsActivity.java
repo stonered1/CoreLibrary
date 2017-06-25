@@ -40,17 +40,20 @@ public class MPermissionsActivity extends AppCompatActivity {
             permissionSuccess(REQUEST_CODE_PERMISSION);
         } else {
             List<String> needPermissions = getDeniedPermissions(permissions);
+            //请求权限
             ActivityCompat.requestPermissions(this, needPermissions.toArray(new String[needPermissions.size()]), REQUEST_CODE_PERMISSION);
         }
     }
 
     /**
-     * 检测所有的权限是否都已授权
+     * 轮询需要的权限，一旦检测到有权限没有给，就返回false
      *
      * @param permissions
-     * @return
+     * @return boolean 是否有权限需要赋予，false:权限没有给。 true:所有的权限都有了
      */
     private boolean checkPermissions(String[] permissions) {
+
+        //如果版本在6.0 以下 返回true  即不需要权限赋予
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
             return true;
         }
@@ -73,6 +76,7 @@ public class MPermissionsActivity extends AppCompatActivity {
     private List<String> getDeniedPermissions(String[] permissions) {
         List<String> needRequestPermissionList = new ArrayList<>();
         for (String permission : permissions) {
+            //将被拒绝的权限和需要请求的权限加入一个List中
             if (ContextCompat.checkSelfPermission(this, permission) !=
                     PackageManager.PERMISSION_GRANTED ||
                     ActivityCompat.shouldShowRequestPermissionRationale(this, permission)) {
